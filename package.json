@@ -1,0 +1,23 @@
+{
+  "name": "117_survival_guide",
+  "version": "0.0.1",
+  "description": "Linux and Git Survival Guide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pavanpatel18/117_survival_guide.git"
+  },
+  "author": "Pavan Patel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pavanpatel18/117_survival_guide/issues"
+  },
+  "homepage": "https://github.com/pavanpatel18/117_survival_guide#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
