@@ -35,3 +35,8 @@ This repository explores the history of the internet and significant technologie
   - Python (Guido van Rossum)
   - Git (Linus Torvalds)
 
+## Visit the Page
+
+- My Figma Project - [here](https://www.figma.com/design/TTsLO9mzS2F4FvkygSRNFh/Home-Page---SSG?node-id=205-2&t=3OEGNAh7r5Qs3enR-1)
+
+- GitHub Pages Hosted Project - [here](https://pavanpatel18.github.io/117_survival_guide)
