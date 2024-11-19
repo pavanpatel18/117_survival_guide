@@ -540,3 +540,24 @@ body {
         border-radius: 30px;
     }
 }
+
+/* Styles for subpages */
+body.subpage {
+    background-color: #f4f4f9; /* Lighter background for subpages */
+    color: #333; /* Darker text for better contrast */
+}
+
+body.subpage .header {
+    background-color: #333; /* Dark header for subpages */
+    color: #fff; /* White text in the header */
+}
+
+body.subpage .navigation {
+    background-color: #ddd; /* Light background for navigation */
+    padding: 1rem;
+}
+
+body.subpage .footer-section {
+    background-color: #eee; /* Light footer background */
+    color: #555; /* Subtle text color for footer */
+}
