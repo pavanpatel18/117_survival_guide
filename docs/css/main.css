@@ -198,40 +198,51 @@ body {
     width: 100%;
 }
 
+/* Testimonial Card Styles */
 .testimonial-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 30%; /* 3 cards at a time */
-    flex: 0 0 30%; /* Makes the cards take up 30% of the container width */
-    text-align: center;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .testimonial-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Testimonial Avatar Styles */
 .testimonial-avatar {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Blockquote Styles */
 blockquote {
     font-style: italic;
+    font-size: 18px;
     color: #555;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
+/* Citation Styles */
 cite {
-    font-size: 14px;
-    color: #777;
+    font-size: 16px;
+    color: #007BFF;
     font-weight: bold;
+}
+
+/* Navigation Container Styles */
+.navigation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 /* Responsive Design */
@@ -245,7 +256,7 @@ cite {
         max-width: 100%;
     }
 }
-/* Style for Slick Slider Arrows */
+/* Slick Arrow Styles */
 .styled-arrow {
     background: #007BFF;
     color: #ffffff;
@@ -254,7 +265,6 @@ cite {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin: 10px; /* Adds space between the buttons and the content */
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -272,7 +282,7 @@ cite {
     float: right;
 }
 
-/* Custom dots styling */
+/* Custom Dots Styles */
 .custom-dots {
     text-align: center;
     margin-top: 20px;
@@ -297,7 +307,6 @@ cite {
 .custom-dots .slick-active button {
     background: #007BFF;
 }
-
 
 /* Footer Section */
 .footer {
