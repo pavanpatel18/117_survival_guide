@@ -245,6 +245,58 @@ cite {
         max-width: 100%;
     }
 }
+/* Style for Slick Slider Arrows */
+.styled-arrow {
+    background: #007BFF;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px; /* Adds space between the buttons and the content */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.styled-arrow:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Align prev and next buttons next to each other */
+.slick-prev {
+    float: left;
+}
+
+.slick-next {
+    float: right;
+}
+
+/* Custom dots styling */
+.custom-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.custom-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.custom-dots button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.custom-dots button:hover,
+.custom-dots .slick-active button {
+    background: #007BFF;
+}
 
 
 /* Footer Section */
