@@ -244,12 +244,14 @@ body {
 
 /* Avatar Styling */
 .testimonial-avatar {
+    display: block; /* Ensures the image is treated as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
     width: 80px;
     height: 80px;
-    border-radius: 50%;
-    border: 3px solid #FFC857;
-    margin-bottom: 20px;
+    border-radius: 50%; /* Makes the image circular */
+    border: 3px solid #FFC857; /* Gold border */
     object-fit: cover;
+    margin-bottom: 20px; /* Adds space below the image */
 }
 
 /* Navigation Dots */
