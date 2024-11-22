@@ -96,55 +96,75 @@ body {
 .intro {
     padding: 60px 20px;
     text-align: center;
-    background: linear-gradient(to right, #F4F9FD, #E8F1FF);
+    background: linear-gradient(to right, #1F1F1F, #121212); /* Dark gradient background */
+    color: #EAEAEA; /* Light gray text */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
 .intro-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
-    gap: 20px;
 }
 
 .intro-text h3 {
-    font-size: 28px;
+    font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #0056D2;
+    color: #FFC857; /* Gold for headings */
 }
 
 .intro-text p {
     font-size: 18px;
     line-height: 1.8;
-    color: #444;
+    color: #B3B3B3; /* Muted gray for body text */
 }
 
 .intro-buttons {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     gap: 15px;
     justify-content: center;
 }
 
-.secondary-btn {
-    padding: 10px 20px;
-    background-color: #68B684;
-    color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.intro-buttons .cta-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 25px;
+    border: none;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.secondary-btn:hover {
-    background-color: #004BB5;
-    color: white;
+/* Primary Button */
+.intro-buttons .cta-btn.primary {
+    background-color: #FF6F61; /* Coral for primary button */
+    color: #FFFFFF; /* White text */
+}
+
+.intro-buttons .cta-btn.primary:hover {
+    background-color: #E65A50; /* Darker coral on hover */
+    transform: scale(1.05);
+}
+
+/* Secondary Button */
+.intro-buttons .secondary-btn {
+    padding: 15px 30px; /* Adjust padding for consistent size */
+    font-size: 18px; /* Ensure readable font size */
+    border-radius: 25px; /* Smooth, rounded corners */
+    border: 2px solid #FFC857; /* Gold border to match theme */
+    background-color: transparent; /* Transparent background for subtlety */
+    color: #FFC857; /* Gold text color for elegance */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.intro-buttons .secondary-btn:hover {
+    background-color: #FFC857; /* Gold background on hover */
+    color: #121212; /* Dark text for contrast on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 0 10px #FFC857; /* Subtle glow effect */
 }
 
 /* Testimonials Section */
