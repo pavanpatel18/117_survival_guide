@@ -9,40 +9,82 @@ body {
 
 /* Header */
 .header {
-    background-color: #1F1F1F;
-    color: #FFC857;
+    background-color: #1F1F1F; /* Slightly lighter black for distinction */
+    color: #FFC857; /* Gold for branding */
     padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
+/* Logo Section */
+.header .logo h1 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    color: #FFC857;
+}
+
+/* Navigation Bar */
 .nav ul {
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
     list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    margin: 0;
 }
 
 .nav ul li a {
     text-decoration: none;
-    color: #EAEAEA;
+    color: #EAEAEA; /* Light gray for links */
+    font-size: 14px;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav ul li a:hover,
 .nav ul li a.active {
-    color: #FF6F61;
+    color: #FF6F61; /* Coral for active or hover state */
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px 20px;
+        align-items: flex-start;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
 /* Hero Section */
 .hero {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('images/hero-subpage.png');
     background-size: cover;
     background-position: center;
     text-align: center;
     padding: 100px 20px;
     color: #FFC857;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    color: #FFC857; /* Gold text */
+    text-align: center;
 }
 
 /* Content Layout */
