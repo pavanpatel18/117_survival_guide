@@ -184,13 +184,155 @@ a:hover {
 
 /* Footer */
 .footer {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    background-color: #1F1F1F;
-    color: #B3B3B3;
-    padding: 40px;
+    background-color: #121212; /* Deep black background */
+    padding: 40px 20px;
+    color: #EAEAEA; /* Light gray text */
     text-align: center;
 }
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Responsive layout */
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center alignment */
+}
+
+/* Branding Section */
+.footer-brand h3 {
+    font-size: 18px;
+    color: #FFC857; /* Gold */
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    color: #B3B3B3; /* Muted gray */
+}
+
+/* Quick Links Section */
+.footer-links h4 {
+    font-size: 16px;
+    color: #FFC857; /* Gold */
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    color: #FFC857; /* Gold links */
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #FF6F61; /* Coral hover */
+}
+
+/* Social Media Section */
+.footer-social h4 {
+    font-size: 16px;
+    color: #FFC857; /* Gold */
+    margin-bottom: 10px;
+}
+
+.footer-social .social-icons a img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social .social-icons a:hover img {
+    transform: scale(1.2); /* Slight enlargement on hover */
+}
+
+/* Newsletter Section */
+.footer-newsletter h4 {
+    font-size: 16px;
+    color: #FFC857; /* Gold */
+    margin-bottom: 10px;
+}
+
+.footer-newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-newsletter input[type="email"] {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #1F1F1F; /* Soft black */
+    border: 1px solid #FFC857; /* Gold border */
+    color: #EAEAEA;
+    border-radius: 5px;
+    outline: none;
+    width: 250px;
+}
+
+.footer-newsletter input[type="email"]::placeholder {
+    color: #B3B3B3; /* Muted gray placeholder */
+}
+
+.footer-newsletter button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #FFC857; /* Gold button */
+    border: none;
+    color: #121212; /* Dark text */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-newsletter button:hover {
+    background-color: #FF6F61; /* Coral hover */
+    transform: scale(1.05); /* Slight enlargement */
+}
+
+/* Copyright Section */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #B3B3B3; /* Muted gray */
+    border-top: 1px solid #333; /* Subtle divider */
+    padding-top: 10px;
+}
+
+.footer-bottom span {
+    color: #FFC857; /* Gold for the year */
+}
+
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links ul li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+    .footer-links ul li:last-child {
+        margin-right: 0;
+    }
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
