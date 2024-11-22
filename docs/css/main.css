@@ -170,41 +170,76 @@ body {
 /* Testimonials Section */
 .testimonials {
     padding: 80px 20px;
-    background: #1F1F1F;
-    color: #EAEAEA; /* Light gray text */
+    background: linear-gradient(to right, #1F1F1F, #121212); /* Dark gradient */
+    color: #EAEAEA;
     text-align: center;
-    border-top: 2px solid #333;
 }
 
 .testimonials h3 {
     font-size: 32px;
-    color: #FFC857; /* Gold for headings */
+    color: #FFC857; /* Gold */
     margin-bottom: 40px;
 }
 
-/* Testimonials Container */
-.testimonials-container {
-    display: flex;
-    gap: 40px; /* Space between cards */
-    justify-content: center;
-    flex-wrap: wrap; /* Wrap cards for responsiveness */
-    padding: 0 10px;
+/* Testimonials Grid */
+.testimonials-container .testimonial-card {
+    background-color: #181818;
+    border: 2px solid #FFC857; /* Gold border */
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    color: #EAEAEA; /* Light gray text */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 10px; /* Add horizontal margin between cards */
 }
 
-/* Testimonial Card */
+.testimonials-container .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 200, 87, 0.6); /* Gold glow */
+}
+
+/* Testimonial Card Styling */
 .testimonial-card {
-    background-color: #FFFFFF; /* White background */
+    background-color: #181818; /* Soft black */
+    border: 2px solid #FFC857; /* Gold border */
     border-radius: 15px; /* Rounded corners */
-    padding: 30px 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    width: 320px; /* Fixed width */
-    height: 320px; /* Fixed height for uniformity */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    padding: 30px;
     text-align: center;
-    margin: 10px;
+    color: #EAEAEA; /* Light gray text */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 6px 20px rgba(255, 200, 87, 0.6); /* Gold glow */
+}
+
+.testimonial-card blockquote {
+    font-size: 16px;
+    font-style: italic;
+    color: #B3B3B3; /* Muted gray */
+    margin: 15px 0;
+}
+
+.testimonial-card cite {
+    font-size: 14px;
+    color: #FFC857; /* Gold for name */
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial-card {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .testimonials-container-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
 }
 
 /* Avatar Styling */
@@ -212,31 +247,19 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    border: 3px solid #0056D2;
-    margin: 10px auto 20px;
+    border: 3px solid #FFC857;
+    margin-bottom: 20px;
     object-fit: cover;
 }
 
-/* Testimonial Text */
-.testimonial-card p {
-    color: #555;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-/* Name Styling */
-.testimonial-card h4 {
-    margin: 10px 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: #222;
-}
-
 /* Navigation Dots */
-.custom-dots {
-    text-align: center;
-    margin-top: 20px;
+.custom-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Circular dots */
+    background: #333; /* Dark gray dots */
+    border: none;
+    transition: background-color 0.3s ease;
 }
 
 .custom-dots li {
@@ -269,22 +292,31 @@ body {
         gap: 20px;
     }
 }
+/* Navigation Container Styling */
+.navigation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between buttons and dots */
+    margin-top: 20px;
+}
 
-/* Slick Arrow Styles */
+/* Buttons for Navigation */
 .styled-arrow {
-    background: #007BFF;
-    color: #ffffff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #181818;
+    color: #FFC857; /* Gold for arrow text */
     font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #FFC857; /* Gold border */
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .styled-arrow:hover {
-    background: #0056b3;
-    transform: scale(1.05);
+    background-color: #FFC857; /* Gold background */
+    color: #181818; /* Dark text for contrast */
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 /* Align prev and next buttons next to each other */
@@ -296,30 +328,18 @@ body {
     float: right;
 }
 
-/* Custom Dots Styles */
-.custom-dots {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.custom-dots li {
-    display: inline-block;
-    margin: 0 5px;
-}
-
-.custom-dots button {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #ddd;
+/* Custom Dots */
+.custom-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Circular dots */
+    background: #333; /* Dark gray */
     border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
-.custom-dots button:hover,
-.custom-dots .slick-active button {
-    background: #007BFF;
+.custom-dots .slick-active .dot {
+    background: #FFC857; /* Gold for active dot */
 }
 
 /* Footer Section */
