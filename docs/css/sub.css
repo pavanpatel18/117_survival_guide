@@ -87,6 +87,64 @@ body {
     text-align: center;
 }
 
+/* General Font Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Use a clean, modern font */
+    color: #EAEAEA; /* Light gray for body text */
+    background-color: #121212; /* Dark background */
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Section Headings (H1, H2, H3) */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif; /* Elegant font for headings */
+    color: #FFC857; /* Gold text for main headings */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Optional: make headings uppercase */
+    letter-spacing: 1px; /* Slightly increased spacing for better readability */
+}
+
+/* Main Heading (H1) */
+h1 {
+    font-size: 36px; /* Large and bold */
+    font-weight: 700;
+}
+
+/* Subheadings (H2) */
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Section Descriptions (H3 or P) */
+h3, .section-description {
+    font-size: 20px;
+    font-weight: 400;
+    color: #B3B3B3; /* Muted gray for secondary headings/descriptions */
+    margin-bottom: 20px;
+}
+
+/* Body Text (P) */
+p {
+    font-size: 16px; /* Standard size for body text */
+    font-weight: 300; /* Light weight for a clean look */
+    color: #EAEAEA; /* Light gray for readability */
+    margin-bottom: 20px;
+}
+
+/* Links in Content */
+a {
+    color: #FFC857; /* Gold links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FF6F61; /* Coral hover */
+}
+
 /* Content Layout */
 .content {
     display: flex;
@@ -126,8 +184,10 @@ body {
 
 /* Footer */
 .footer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
     background-color: #1F1F1F;
-    color: #EAEAEA;
+    color: #B3B3B3;
     padding: 40px;
     text-align: center;
 }
