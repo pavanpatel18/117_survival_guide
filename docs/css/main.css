@@ -6,10 +6,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: #EAEAEA; /* Light gray text */
+    background-color: #121212; /* Dark theme background */
     line-height: 1.6;
-    color: #333;
-    background-color: #f9fafc;
 }
 
 /* Header Section */
@@ -18,8 +18,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background: #f0f4fc;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #1F1F1F; /* Dark gray background */
+    color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -27,7 +27,7 @@ body {
 
 .header .logo h1 {
     font-size: 28px;
-    color: #007BFF;
+    color: #FFC857; /* Gold for the logo */
 }
 
 .nav ul {
@@ -38,17 +38,13 @@ body {
 
 .nav ul li a {
     text-decoration: none;
-    color: #007BFF;
+    color: #EAEAEA; /* Light gray links */
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .nav ul li a:hover {
-    color: #0056b3;
-}
-
-.nav ul li a.active {
-    color: #FF4500; /* Highlight current page */
+    color: #FF6F61; /* Coral hover effect */
 }
 
 /* Hero Section */
@@ -58,38 +54,41 @@ body {
     align-items: center;
     text-align: center;
     padding: 120px 20px;
-    height: 100vh; /* Full-screen hero */
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('images/hero.png');
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('images/hero.png');
     background-size: cover;
     background-position: center;
-    color: white;
+    color: #EAEAEA; /* Light gray text */
 }
 
 .hero-text h2 {
     font-size: 48px;
     margin-bottom: 20px;
     font-weight: bold;
+    color: #FFC857; /* Gold for headings */
 }
 
 .hero-text p {
     font-size: 20px;
     margin-bottom: 30px;
     line-height: 1.8;
+    color: #B3B3B3; /* Muted gray for subtext */
 }
 
 .cta-btn {
     padding: 15px 30px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #FF6F61; /* Coral button */
+    color: white; /* Button text */
     border: none;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 18px;
-    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-btn:hover {
-    background-color: #0056b3;
+    background-color: #E65A50; /* Slightly darker coral on hover */
     transform: scale(1.05);
 }
 
@@ -97,7 +96,7 @@ body {
 .intro {
     padding: 60px 20px;
     text-align: center;
-    background: linear-gradient(to right, #f9fafc, #e8f0fe);
+    background: linear-gradient(to right, #F4F9FD, #E8F1FF);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,13 +115,13 @@ body {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #007BFF;
+    color: #0056D2;
 }
 
 .intro-text p {
     font-size: 18px;
     line-height: 1.8;
-    color: #555;
+    color: #444;
 }
 
 .intro-buttons {
@@ -134,8 +133,8 @@ body {
 
 .secondary-btn {
     padding: 10px 20px;
-    background-color: #eaeaea;
-    color: #333;
+    background-color: #68B684;
+    color: white;
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
@@ -144,118 +143,113 @@ body {
 }
 
 .secondary-btn:hover {
-    background-color: #007BFF;
+    background-color: #004BB5;
     color: white;
 }
 
 /* Testimonials Section */
 .testimonials {
-    padding: 40px 20px;
-    background: #f9fafc;
+    padding: 80px 20px;
+    background: #1F1F1F;
+    color: #EAEAEA; /* Light gray text */
     text-align: center;
-    border-top: 2px solid #eaeaea;
-}
-
-.testimonials blockquote {
-    font-style: italic;
-    font-size: 22px;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-.testimonials cite {
-    display: block;
-    margin-top: 10px;
-    font-size: 18px;
-    color: #777;
-}
-
-.testimonials p {
-    font-size: 18px;
-    margin-top: 10px;
-    color: #444;
-}
-
-/* Testimonials Section */
-.testimonials {
-    padding: 60px 20px;
-    background: #f9fafc;
-    text-align: center;
-    border-top: 2px solid #eaeaea;
+    border-top: 2px solid #333;
 }
 
 .testimonials h3 {
-    font-size: 28px;
-    color: #007BFF;
+    font-size: 32px;
+    color: #FFC857; /* Gold for headings */
     margin-bottom: 40px;
 }
 
+/* Testimonials Container */
 .testimonials-container {
     display: flex;
-    gap: 20px;
-    flex-wrap: nowrap; /* Prevents wrapping, to facilitate slideshow */
-    overflow: hidden; /* Hide elements that are not in the current view */
-    width: 100%;
-}
-
-/* Testimonial Card Styles */
-.testimonial-card {
-    background: #ffffff;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Testimonial Avatar Styles */
-.testimonial-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Blockquote Styles */
-blockquote {
-    font-style: italic;
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-/* Citation Styles */
-cite {
-    font-size: 16px;
-    color: #007BFF;
-    font-weight: bold;
-}
-
-/* Navigation Container Styles */
-.navigation-container {
-    display: flex;
-    align-items: center;
+    gap: 40px; /* Space between cards */
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap; /* Wrap cards for responsiveness */
+    padding: 0 10px;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background-color: #FFFFFF; /* White background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 30px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 320px; /* Fixed width */
+    height: 320px; /* Fixed height for uniformity */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px;
+}
+
+/* Avatar Styling */
+.testimonial-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #0056D2;
+    margin: 10px auto 20px;
+    object-fit: cover;
+}
+
+/* Testimonial Text */
+.testimonial-card p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Name Styling */
+.testimonial-card h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Navigation Dots */
+.custom-dots {
+    text-align: center;
     margin-top: 20px;
+}
+
+.custom-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.custom-dots button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #333; /* Dark dots */
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.custom-dots button:hover,
+.custom-dots .slick-active button {
+    background: #FFC857; /* Gold active dot */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 36px;
+    }
     .testimonials-container {
         flex-direction: column;
-        gap: 30px;
-    }
-
-    .testimonial-card {
-        max-width: 100%;
+        gap: 20px;
     }
 }
+
 /* Slick Arrow Styles */
 .styled-arrow {
     background: #007BFF;
@@ -310,8 +304,8 @@ cite {
 
 /* Footer Section */
 .footer {
-    background-color: #333;
-    color: white;
+    background-color: #1F1F1F; /* Dark gray footer */
+    color: #EAEAEA; /* Light gray text */
     padding: 40px 20px;
 }
 
@@ -353,14 +347,14 @@ cite {
 }
 
 .footer-links ul li a {
-    color: #007BFF;
+    color: #FFC857; /* Gold for footer links */
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
 }
 
 .footer-links ul li a:hover {
-    color: #FF4500;
+    color: #FF6F61; /* Coral on hover */
 }
 
 .footer-social h4 {
