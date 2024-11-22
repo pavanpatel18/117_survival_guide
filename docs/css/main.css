@@ -193,6 +193,14 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 0 10px; /* Add horizontal margin between cards */
 }
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    position: relative; /* Create a containing context */
+    padding-top: 10px; /* Extra padding to avoid cutting on hover */
+}
 
 .testimonials-container .testimonial-card:hover {
     transform: translateY(-5px);
@@ -201,19 +209,21 @@ body {
 
 /* Testimonial Card Styling */
 .testimonial-card {
-    background-color: #181818; /* Soft black */
-    border: 2px solid #FFC857; /* Gold border */
-    border-radius: 15px; /* Rounded corners */
+    background-color: #181818;
+    border: 2px solid #FFC857;
+    border-radius: 15px;
     padding: 30px;
     text-align: center;
-    color: #EAEAEA; /* Light gray text */
+    color: #EAEAEA;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Ensure it moves independently */
+    z-index: 1; /* Keeps the card on top */
 }
 
 .testimonial-card:hover {
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 6px 20px rgba(255, 200, 87, 0.6); /* Gold glow */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 200, 87, 0.6); /* Add glow */
 }
 
 .testimonial-card blockquote {
