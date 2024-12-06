@@ -4,6 +4,7 @@ body {
     color: #EAEAEA;
     background-color: #121212; /* Dark theme background */
     margin: 0;
+    font-size: 16px; /* Base size for body text */
     line-height: 1.6;
 }
 /* Header Section */
@@ -20,8 +21,8 @@ body {
 }
 
 .header .logo h1 {
-    font-size: 28px;
-    color: #FFC857; /* Gold for the logo */
+    font-size: calc(16px * 1.618); /* Approximately 26px */
+    color: #FFC857;
 }
 
 /* Hamburger Icon */
@@ -110,6 +111,7 @@ body {
 }
 
 .nav a {
+    font-size: calc(16px); /* Match base font size */
     text-decoration: none;
     color: white;
     font-size: 18px;
@@ -129,6 +131,14 @@ body {
     padding: 100px 20px;
     color: #FFC857;
 }
+.hero h1 {
+    font-size: calc(16px * 1.618 * 1.618); /* Approximately 42px */
+}
+
+.hero p {
+    font-size: calc(16px * 1.618); /* Approximately 26px */
+}
+
 
 .hero-overlay {
     background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
@@ -158,28 +168,32 @@ h1, h2, h3 {
 
 /* Main Heading (H1) */
 h1 {
-    font-size: 36px; /* Large and bold */
+    font-size: calc(16px * 1.618 * 1.618); /* Approximately 42px */
     font-weight: 700;
+    line-height: 1.2;
 }
 
 /* Subheadings (H2) */
 h2 {
-    font-size: 28px;
+    font-size: calc(16px * 1.618); /* Approximately 26px */
     font-weight: 600;
+    line-height: 1.3;
     margin-bottom: 15px;
 }
 
 /* Section Descriptions (H3 or P) */
 h3, .section-description {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: calc(16px); /* Base size */
+    font-weight: 500;
+    line-height: 1.4;
     color: #B3B3B3; /* Muted gray for secondary headings/descriptions */
     margin-bottom: 20px;
 }
 
 /* Body Text (P) */
 p {
-    font-size: 16px; /* Standard size for body text */
+    font-size: calc(16px); /* Approximately 10px */
+    line-height: 1.6;
     font-weight: 300; /* Light weight for a clean look */
     color: #EAEAEA; /* Light gray for readability */
     margin-bottom: 20px;
@@ -188,6 +202,7 @@ p {
 /* Links in Content */
 a {
     color: #FFC857; /* Gold links */
+    font-size: 16px; /* Same as body text */
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
