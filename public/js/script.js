@@ -25,26 +25,20 @@ $(document).ready(function(){
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+function toggleMenu() {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
+    const overlay = document.getElementById('overlay');
 
-    // Create overlay dynamically
-    const overlay = document.createElement('div');
-    overlay.className = 'overlay';
-    document.body.appendChild(overlay);
+    // Toggle active classes
+    hamburger.classList.toggle('open');
+    navMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
+}
 
-    // Toggle Navigation Menu and Overlay on Hamburger Click
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('open');
-        overlay.classList.toggle('active'); // Toggle overlay visibility
-    });
-
-    // Close Menu and Overlay when Clicking on the Overlay
-    overlay.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('open');
-        overlay.classList.remove('active');
-    });
+// Close the menu when the overlay is clicked
+document.getElementById('overlay').addEventListener('click', () => {
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('nav-menu').classList.remove('active');
+    document.getElementById('overlay').classList.remove('active');
 });
