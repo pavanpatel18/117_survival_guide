@@ -6,68 +6,120 @@ body {
     margin: 0;
     line-height: 1.6;
 }
-
-/* Header */
+/* Header Section */
 .header {
-    background-color: #1F1F1F; /* Slightly lighter black for distinction */
-    color: #FFC857; /* Gold for branding */
-    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 20px; /* Adjust for equal top and bottom spacing */
+    background: #1F1F1F; /* Dark background */
+    color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
-/* Logo Section */
 .header .logo h1 {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 0;
-    color: #FFC857;
+    font-size: 28px;
+    color: #FFC857; /* Gold for the logo */
 }
 
-/* Navigation Bar */
+/* Hamburger Icon */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 7px; /* Increase the gap between the bars */
+    cursor: pointer;
+    position: fixed; /* Keep it fixed */
+    top: 20px; /* Adjust spacing to align with the header */
+    right: 20px; /* Keep it on the right */
+    z-index: 1001; /* Ensure it's above all other elements */
+}
+
+.hamburger span {
+    display: block;
+    width: 30px; /* Increase width for a larger icon */
+    height: 4px; /* Increase thickness of the bars */
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Open Hamburger Icon Animation */
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Navigation Menu */
+.nav {
+    position: fixed; /* Make it fixed to the viewport */
+    top: 0; /* Start from the top */
+    right: -300px; /* Initially hidden off-screen */
+    width: 300px; /* Set menu width */
+    height: 100%; /* Cover full height */
+    background-color: #333; /* Dark background */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items from the top */
+    padding-top: 60px; /* Add spacing to account for the hamburger icon */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
+    transition: right 0.3s ease; /* Smooth sliding effect */
+    z-index: 1000; /* Ensure it's above most elements */
+}
+
+.nav.active {
+    right: 0; /* Slide in when active */
+}
+
+/* Navigation Links Styling */
 .nav ul {
     list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
     padding: 0;
-}
-
-.nav ul li {
     margin: 0;
 }
 
-.nav ul li a {
+.nav li {
+    margin: 15px 0;
+    text-align: left;
+    padding-left: 20px; /* Indent links for better alignment */
+}
+
+.nav a {
     text-decoration: none;
-    color: #EAEAEA; /* Light gray for links */
-    font-size: 14px;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
 }
 
-.nav ul li a:hover,
-.nav ul li a.active {
-    color: #FF6F61; /* Coral for active or hover state */
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        padding: 15px 20px;
-        align-items: flex-start;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
+.nav a:hover {
+    background-color: #555;
 }
 /* Hero Section */
 .hero {
@@ -184,168 +236,161 @@ a:hover {
 
 /* Footer */
 .footer {
-    background-color: #121212; /* Deep black background */
+    background-color: #121212; 
     padding: 40px 20px;
-    color: #EAEAEA; /* Light gray text */
-    text-align: center;
+    color: #EAEAEA; 
+    font-size: 14px;
 }
 
-.footer-container {
+/* Center all top elements by default, 
+   so we can then adjust each column as needed */
+.footer-top {
     display: flex;
-    flex-wrap: wrap; /* Responsive layout */
-    justify-content: space-between;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers all columns horizontally */
+    align-items: start;
     max-width: 1200px;
-    margin: 0 auto; /* Center alignment */
+    margin: 0 auto;
+    gap: 40px;
+    text-align: left;
 }
 
-/* Branding Section */
-.footer-brand h3 {
-    font-size: 18px;
-    color: #FFC857; /* Gold */
+/* Left Column (unchanged) */
+.footer-left h3 {
+    font-size: calc(16px * 1.618); /* Golden ratio for subheadings */
+    color: #FFC857;
     margin-bottom: 10px;
 }
 
-.footer-brand p {
-    font-size: 14px;
-    color: #B3B3B3; /* Muted gray */
+.footer-left p {
+    font-size: calc(16px / 1.618); /* Golden ratio smaller */
+    color: #B3B3B3;
+    margin-bottom: 20px;
 }
 
-/* Quick Links Section */
-.footer-links h4 {
+.footer-left h4 {
     font-size: 16px;
-    color: #FFC857; /* Gold */
+    color: #FFC857;
     margin-bottom: 10px;
 }
 
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin: 5px 0;
-}
-
-.footer-links ul li a {
-    color: #FFC857; /* Gold links */
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-
-.footer-links ul li a:hover {
-    color: #FF6F61; /* Coral hover */
-}
-
-/* Social Media Section */
-.footer-social h4 {
-    font-size: 16px;
-    color: #FFC857; /* Gold */
-    margin-bottom: 10px;
-}
-
-.footer-social .social-icons a img {
+.social-icons a img {
     width: 24px;
     height: 24px;
     margin: 0 5px;
     transition: transform 0.3s ease;
 }
 
-.footer-social .social-icons a:hover img {
-    transform: scale(1.2); /* Slight enlargement on hover */
+.social-icons a:hover img {
+    transform: scale(1.2);
 }
 
-/* Newsletter Section */
-.footer-newsletter h4 {
+/* Middle Section (Quick Links) */
+.footer-middle {
+    margin: 0 auto; /* Ensures it's centered horizontally */
+    text-align: center;
+}
+
+.footer-middle h4 {
     font-size: 16px;
-    color: #FFC857; /* Gold */
+    color: #FFC857;
+    margin-bottom: 20px;
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px 60px; /* Adjust spacing as needed */
+    justify-content: center; /* Ensure columns are centered within the grid */
+}
+
+.footer-links-grid .link-item a {
+    color: #EAEAEA;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links-grid .link-item a:hover {
+    color: #FF6F61;
+}
+
+/* Right Column (Newsletter) */
+.footer-right h4 {
+    font-size: 16px;
+    color: #FFC857;
     margin-bottom: 10px;
 }
 
-.footer-newsletter form {
+.footer-right form {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.footer-newsletter input[type="email"] {
+.footer-right input[type="email"] {
     padding: 10px;
     font-size: 14px;
-    background-color: #1F1F1F; /* Soft black */
-    border: 1px solid #FFC857; /* Gold border */
+    background-color: #1F1F1F;
+    border: 1px solid #FFC857;
     color: #EAEAEA;
     border-radius: 5px;
     outline: none;
-    width: 250px;
+    flex: 1;
 }
 
-.footer-newsletter input[type="email"]::placeholder {
-    color: #B3B3B3; /* Muted gray placeholder */
+.footer-right input[type="email"]::placeholder {
+    color: #B3B3B3;
 }
 
-.footer-newsletter button {
+.footer-right button {
     padding: 10px 20px;
     font-size: 14px;
-    background-color: #FFC857; /* Gold button */
+    background-color: #FFC857;
     border: none;
-    color: #121212; /* Dark text */
+    color: #121212;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
 }
 
-.footer-newsletter button:hover {
-    background-color: #FF6F61; /* Coral hover */
-    transform: scale(1.05); /* Slight enlargement */
+.footer-right button:hover {
+    background-color: #FF6F61;
+    transform: scale(1.05);
 }
 
-/* Copyright Section */
+/* Bottom Section */
 .footer-bottom {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #B3B3B3; /* Muted gray */
-    border-top: 1px solid #333; /* Subtle divider */
+    margin-top: 40px;
+    border-top: 1px solid #333;
     padding-top: 10px;
+    text-align: center;
+    color: #B3B3B3;
 }
 
-.footer-bottom span {
-    color: #FFC857; /* Gold for the year */
-}
-
-
-/* Responsive Footer */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .footer-container {
+    .footer-top {
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 
-    .footer-links ul li {
-        display: inline-block;
-        margin-right: 15px;
+    .footer-links-grid {
+        gap: 10px 20px;
     }
 
-    .footer-links ul li:last-child {
-        margin-right: 0;
-    }
-}
-
-
-/* Responsive */
-@media (max-width: 768px) {
-    .content {
+    .footer-right form {
         flex-direction: column;
     }
 
-    .left-content,
-    .right-navigation {
+    .footer-right input[type="email"],
+    .footer-right button {
         width: 100%;
     }
 
-    .hero {
-        padding: 50px 20px;
+    .footer-right button {
+        margin-top: 10px;
     }
 }
