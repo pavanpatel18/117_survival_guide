@@ -125,12 +125,16 @@ body {
 }
 /* Hero Section */
 .hero {
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    height: 50vh; /* Adjust height as needed */
+    background: linear-gradient(135deg, #1F1F1F, #FFC857); /* Dark to gold gradient */
     text-align: center;
-    padding: 100px 20px;
-    color: #FFC857;
+    color: #FFC857; /* Gold text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .hero h1 {
     font-size: calc(16px * 1.618 * 1.618); /* Approximately 42px */
 }
@@ -139,13 +143,12 @@ body {
     font-size: calc(16px * 1.618); /* Approximately 26px */
 }
 
-
+/* Hero Overlay */
 .hero-overlay {
     background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
     padding: 20px;
     border-radius: 10px;
-    display: inline-block;
-    color: #FFC857; /* Gold text */
+    color: #FFC857;
     text-align: center;
 }
 
