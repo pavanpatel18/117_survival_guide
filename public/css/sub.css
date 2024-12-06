@@ -150,11 +150,17 @@ body {
 }
 
 /* General Font Styles */
+
 body {
     font-family: 'Roboto', sans-serif; /* Use a clean, modern font */
     color: #EAEAEA; /* Light gray for body text */
     background-color: #121212; /* Dark background */
     line-height: 1.6; /* Improved readability */
+}
+
+/* Global Text Justification */
+body, p {
+    text-align: justify;
 }
 
 /* Section Headings (H1, H2, H3) */
