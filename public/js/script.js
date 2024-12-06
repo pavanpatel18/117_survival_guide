@@ -24,3 +24,27 @@ $(document).ready(function(){
         'margin-top': '20px'
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    // Create overlay dynamically
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    document.body.appendChild(overlay);
+
+    // Toggle Navigation Menu and Overlay on Hamburger Click
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('open');
+        overlay.classList.toggle('active'); // Toggle overlay visibility
+    });
+
+    // Close Menu and Overlay when Clicking on the Overlay
+    overlay.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('open');
+        overlay.classList.remove('active');
+    });
+});

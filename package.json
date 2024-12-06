@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/pavanpatel18/117_survival_guide#readme",
   "dependencies": {
-    "express": "^4.21.0"
-  }
+    "ejs": "^3.1.10",
+    "express": "^4.21.1"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": []
 }

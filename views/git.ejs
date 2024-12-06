@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIT - Version Control System</title>
+    <link rel="stylesheet" href="/css/sub.css"> <!-- Consistent CSS for both pages -->
+  </head>
+  <body class="subpage">
+    <!-- Include the Header -->
+    <%- include('partials/header') %>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: url('/images/hero-subpage.png') no-repeat center center; background-size: cover;">
+        <div class="hero-overlay">
+            <h2>GIT: The Version Control Revolution</h2>
+            <p>Learn about the powerful tool that transformed software development workflows.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <main class="content">
+        <!-- Left Content Section -->
+        <section class="left-content">
+            <header>
+                <h1>Introduction to GIT</h1>
+            </header>
+            <p>
+                Git is a distributed version control system designed to handle everything from small to very large projects with speed and efficiency. It is an essential tool for developers to track changes in source code during software development.
+            </p>
+
+            <h2>History of Git</h2>
+            <p>
+                Git was created by Linus Torvalds in 2005, primarily to manage the development of the Linux kernel. Before Git, the Linux kernel community used a proprietary distributed version control system called BitKeeper. However, when the relationship between the Linux community and BitKeeper's developers deteriorated, Linus Torvalds developed Git as a free and open-source alternative.
+            </p>
+
+            <h2>Key Features of Git</h2>
+            <ul>
+                <li><strong>Distributed:</strong> Every developer's working copy of the code is also a repository that can contain the full history of all changes.</li>
+                <li><strong>Fast Performance:</strong> Git is optimized for performance, making operations like committing, branching, merging, and comparing versions extremely fast.</li>
+                <li><strong>Branching and Merging:</strong> Git's branching model allows developers to work on multiple features, fixes, or experiments simultaneously, without interfering with the main codebase.</li>
+                <li><strong>Data Integrity:</strong> Git ensures the integrity of source code through checksums and cryptographic methods, preventing code corruption.</li>
+                <li><strong>Staging Area:</strong> Git includes a staging area where changes can be reviewed before being committed, giving developers greater control over what goes into each commit.</li>
+            </ul>
+
+            <h2>Common Git Commands</h2>
+            <ul>
+                <li><code>git init</code>: Initialize a new Git repository.</li>
+                <li><code>git clone</code>: Create a working copy of a remote repository.</li>
+                <li><code>git add</code>: Add changes to the staging area before committing.</li>
+                <li><code>git commit</code>: Commit staged changes with a message describing what was changed.</li>
+                <li><code>git pull</code>: Fetch and merge changes from a remote repository.</li>
+                <li><code>git push</code>: Upload local repository changes to a remote repository.</li>
+                <li><code>git branch</code>: List, create, or delete branches.</li>
+                <li><code>git checkout</code>: Switch between branches or restore working tree files.</li>
+                <li><code>git merge</code>: Merge two branches together.</li>
+                <li><code>git log</code>: Show commit logs/history of the repository.</li>
+            </ul>
+
+            <h2>Git Workflow</h2>
+            <p>
+                Git allows developers to follow a variety of workflows depending on the project's needs. One common approach is the feature-branch workflow:
+            </p>
+            <ol>
+                <li>Create a new branch for a feature or fix using <code>git branch feature-name</code>.</li>
+                <li>Switch to the new branch using <code>git checkout feature-name</code>.</li>
+                <li>Make changes and commit them using <code>git commit</code>.</li>
+                <li>Push the branch to a remote repository using <code>git push origin feature-name</code>.</li>
+                <li>Create a pull request to merge the branch back into the main codebase.</li>
+                <li>Once reviewed, the branch is merged, and the feature is complete.</li>
+            </ol>
+
+            <h2>Popular Git Hosting Services</h2>
+            <p>
+                Several platforms provide Git repository hosting services with additional collaboration features. Some popular ones include:
+            </p>
+            <ul>
+                <li><strong>GitHub:</strong> A popular platform for hosting Git repositories with additional features like pull requests, issue tracking, and project management tools.</li>
+                <li><strong>GitLab:</strong> An open-source Git repository hosting service with built-in CI/CD (Continuous Integration/Continuous Deployment) features.</li>
+                <li><strong>Bitbucket:</strong> A Git repository hosting service, often used by teams who work with Atlassian tools like Jira and Confluence.</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>
+                Git has revolutionized version control systems with its speed, flexibility, and distributed nature. Whether you're a solo developer or part of a large team, Git enables efficient collaboration and reliable code management across all types of projects.
+            </p>
+        </section>
+
+        <!-- Right Navigation Section -->
+        <aside class="right-navigation">
+            <ul>
+                <li><a href="/">Home Page</a></li>
+                <li><a href="/git" class="active">GIT</a></li>
+                <li><a href="/linux">Linux</a></li>
+                <li><a href="/pre_internet">Pre-Internet: Key Figures and Concepts</a></li>
+                <li><a href="/internet_development">The Birth of the Internet</a></li>
+                <li><a href="/web_1_0">Web 1.0: The Static Web</a></li>
+                <li><a href="/web_2_0">Web 2.0: The Dynamic and Social Web</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Include the Footer -->
+    <%- include('partials/footer') %>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

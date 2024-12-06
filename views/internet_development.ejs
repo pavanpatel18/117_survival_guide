@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Birth of the Internet</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body class="subpage">
-    <div class="container">
-        <!-- Content on the left -->
-        <div class="content">
+    <link rel="stylesheet" href="/css/sub.css"> <!-- Consistent styling -->
+  </head>
+  <body class="subpage">
+    <!-- Include the Header -->
+    <%- include('partials/header') %>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: url('/images/hero-subpage.png') no-repeat center center; background-size: cover;">
+        <div class="hero-overlay">
+            <h2>The Birth of the Internet</h2>
+            <p>Explore the milestones and innovations that transformed ARPANET into the modern internet.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <main class="content">
+        <!-- Left Content Section -->
+        <section class="left-content">
             <header>
                 <h1>The Birth of the Internet</h1>
             </header>
@@ -47,24 +59,24 @@
                 </ul>
                 <p>These milestones highlight how the internet evolved from a military experiment into a global communication platform that connects people and systems worldwide.</p>
             </section>
-        </div>
+        </section>
 
-        <!-- Navigation on the right -->
-        <div class="navigation">
+        <!-- Right Navigation Section -->
+        <aside class="right-navigation">
             <ul>
-                <li><a href="index.html">Home Page</a></li>
-                <li><a href="git.html">GIT</a></li>
-                <li><a href="linux.html">Linux</a></li>
-                <li><a href="pre_internet.html">Pre-Internet: Key Figures and Concepts</a></li>
-                <li><a href="internet_development.html">The Birth of the Internet</a></li>
-                <li><a href="web_1_0.html">Web 1.0: The Static Web</a></li>
-                <li><a href="web_2_0.html">Web 2.0: The Dynamic and Social Web</a></li>
+                <li><a href="/">Home Page</a></li>
+                <li><a href="/git">GIT</a></li>
+                <li><a href="/linux">Linux</a></li>
+                <li><a href="/pre_internet">Pre-Internet: Key Figures and Concepts</a></li>
+                <li><a href="/internet_development" class="active">The Birth of the Internet</a></li>
+                <li><a href="/web_1_0">Web 1.0: The Static Web</a></li>
+                <li><a href="/web_2_0">Web 2.0: The Dynamic and Social Web</a></li>
             </ul>
-        </div>
-    </div>
+        </aside>
+    </main>
 
-    <footer>
-        <p>© 2024 History of Internet</p>
-    </footer>
-</body>
+    <!-- Include the Footer -->
+    <%- include('partials/footer') %>
+    <script src="/js/script.js"></script>
+  </body>
 </html>

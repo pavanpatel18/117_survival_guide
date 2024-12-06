@@ -4,29 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre-Internet: Key Figures and Concepts</title>
-    <link rel="stylesheet" href="css/sub.css">
+    <link rel="stylesheet" href="/css/sub.css">
 </head>
 <body class="subpage">
     <!-- Header Section -->
-    <header class="header">
-        <div class="logo">
-            <h1>The History of the Internet</h1>
-        </div>
-        <nav class="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="git.html">Git</a></li>
-                <li><a href="linux.html">Linux</a></li>
-                <li><a href="pre_internet.html" class="active">Pre-Internet</a></li>
-                <li><a href="internet_development.html">Internet Development</a></li>
-                <li><a href="web_1_0.html">Web 1.0</a></li>
-                <li><a href="web_2_0.html">Web 2.0</a></li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('partials/header') %>
 
     <!-- Hero Section -->
-    <section class="hero" style="background: url('images/hero-subpage.png') no-repeat center center; background-size: cover;">
+    <section class="hero" style="background: url('/images/hero-subpage.png') no-repeat center center; background-size: cover;">
         <div class="hero-overlay">
             <h2>Pre-Internet: Key Figures and Concepts</h2>
             <p>Explore the pioneering ideas and figures that laid the groundwork for today's internet.</p>
@@ -70,61 +55,18 @@
         <!-- Right Navigation Section -->
         <aside class="right-navigation">
             <ul>
-                <li><a href="index.html">Home Page</a></li>
-                <li><a href="git.html">GIT</a></li>
-                <li><a href="linux.html">Linux</a></li>
-                <li><a href="internet_development.html">The Birth of the Internet</a></li>
-                <li><a href="web_1_0.html">Web 1.0</a></li>
-                <li><a href="web_2_0.html">Web 2.0</a></li>
+                <li><a href="/">Home Page</a></li>
+                <li><a href="/git">GIT</a></li>
+                <li><a href="/linux">Linux</a></li>
+                <li><a href="/internet_development">The Birth of the Internet</a></li>
+                <li><a href="/web_1_0">Web 1.0</a></li>
+                <li><a href="/web_2_0">Web 2.0</a></li>
             </ul>
         </aside>
     </main>
 
     <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-container">
-            <!-- Branding Section -->
-            <div class="footer-brand">
-                <h3>The History of the Internet</h3>
-                <p>Your go-to platform for mastering tech tools and knowledge.</p>
-            </div>
-    
-            <!-- Links Section -->
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
-    
-            <!-- Social Media Section -->
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-                    <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
-                    <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
-                    <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Newsletter Section -->
-        <div class="footer-newsletter">
-            <h4>Stay Updated</h4>
-            <form>
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-
-        <!-- Copyright Section -->
-        <div class="footer-bottom">
-            <p>&copy; <span id="currentYear"></span> The History of the Internet. All rights reserved.</p>
-        </div>
-    </footer>
+    <%- include('partials/footer') %>
+    <script src="/js/script.js"></script>
 </body>
 </html>

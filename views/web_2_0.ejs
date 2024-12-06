@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web 2.0: The Dynamic and Social Web</title>
+    <link rel="stylesheet" href="/css/sub.css"> <!-- Consistent CSS for all pages -->
+  </head>
+  <body class="subpage">
+    <!-- Include the Header -->
+    <%- include('partials/header') %>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: url('/images/hero-subpage.png') no-repeat center center; background-size: cover;">
+        <div class="hero-overlay">
+            <h2>Web 2.0: The Dynamic and Social Web</h2>
+            <p>Explore the shift from static to interactive and social internet platforms.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <main class="content">
+        <!-- Left Content Section -->
+        <section class="left-content">
+            <header>
+                <h1>Web 2.0: The Dynamic and Social Web</h1>
+            </header>
+            <section>
+                <p>Web 2.0, emerging in the early 2000s, marked a major shift from static, read-only websites (Web 1.0) to dynamic, user-generated platforms. It was defined by interactive features, social media, and collaborative tools. Web 2.0 democratized content creation, allowing users to contribute to and shape the web in ways that were previously unimaginable.</p>
+            </section>
+            <section>
+                <h2>Google Search and PageRank: Revolutionizing Information Retrieval</h2>
+                <p>Google, founded by Larry Page and Sergey Brin in 1998, transformed the search engine industry with its PageRank algorithm. Unlike previous search engines that relied mainly on keyword matching, Google’s PageRank evaluated the link structure of websites, essentially treating links as "votes" for a website’s authority and relevance.</p>
+                <p>PageRank's ability to prioritize results based on the number and quality of links to a page made it far superior in delivering relevant content. This approach revolutionized how people found information on the web, solidifying Google as the dominant search engine. Over time, Google integrated other advanced search techniques, continuously improving its services and setting new standards for information retrieval in the Web 2.0 era.</p>
+            </section>
+            <section>
+                <h2>Roy Fielding and REST: The Backbone of Modern APIs</h2>
+                <p>In 2000, Roy Fielding introduced REST (Representational State Transfer) in his Ph.D. dissertation, which became a foundational concept for modern web architecture. REST defined a set of principles for designing networked applications that communicate over HTTP, the same protocol used by the web.</p>
+                <p>REST simplified communication between client and server by using standard HTTP methods such as GET, POST, PUT, and DELETE. Its stateless, scalable, and flexible nature made it an ideal architecture for building web services and APIs. The RESTful approach enabled web applications to become more interconnected, allowing for seamless data exchange between systems and services, fueling the rise of mashups and integration in the Web 2.0 era.</p>
+            </section>
+            <section>
+                <h2>Node.js and JavaScript: Expanding JavaScript to the Server</h2>
+                <p>Before the rise of Web 2.0, JavaScript was primarily a client-side scripting language, enabling simple interactions on web pages. However, in 2009, Ryan Dahl introduced Node.js, a runtime environment that allowed JavaScript to run on the server side. This innovation dramatically expanded JavaScript’s role, making it a full-stack language that could handle both front-end and back-end development.</p>
+                <p>Node.js is event-driven and non-blocking, ideal for real-time, data-intensive applications like chat servers, streaming services, and APIs. It became a key technology in modern web development, enabling highly efficient and scalable applications such as Netflix, LinkedIn, and Uber.</p>
+            </section>
+            <section>
+                <h2>Social Media and User-Generated Content: The Heart of Web 2.0</h2>
+                <p>Social media platforms like Facebook (2004), YouTube (2005), and Twitter (2006) allowed users to generate, share, and interact with content on a massive scale. This made the internet more democratic and participatory, transforming industries such as marketing, journalism, and entertainment.</p>
+                <p>User-generated content, reviews, and peer-to-peer recommendations became essential to platforms like Amazon and Yelp, influencing purchasing decisions and enhancing the user experience.</p>
+            </section>
+            <section>
+                <h2>AJAX: Enhancing Web Interactivity and User Experience</h2>
+                <p>AJAX (Asynchronous JavaScript and XML) allowed web pages to update asynchronously without requiring a full-page reload. This enabled seamless user interactions similar to desktop applications and was crucial to applications like Google Maps and Gmail. AJAX became a hallmark of Web 2.0, pushing the boundaries of web application usability.</p>
+            </section>
+            <section>
+                <h2>Blogging and Wikis: Empowering Content Creation</h2>
+                <p>Platforms like Blogger (1999), WordPress (2003), and Wikipedia (2001) empowered users to create and share content, shifting the web from passive consumption to active participation. Blogs and wikis became essential tools for individuals and communities, reshaping industries like journalism and education.</p>
+            </section>
+        </section>
+
+        <!-- Right Navigation Section -->
+        <aside class="right-navigation">
+            <ul>
+                <li><a href="/">Home Page</a></li>
+                <li><a href="/git">GIT</a></li>
+                <li><a href="/linux">Linux</a></li>
+                <li><a href="/pre_internet">Pre-Internet</a></li>
+                <li><a href="/internet_development">The Birth of the Internet</a></li>
+                <li><a href="/web_1_0">Web 1.0: The Static Web</a></li>
+                <li><a href="/web_2_0" class="active">Web 2.0: The Dynamic and Social Web</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Include the Footer -->
+    <%- include('partials/footer') %>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

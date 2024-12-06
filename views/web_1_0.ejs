@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web 1.0: The Static Web</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body class="subpage">
-    <div class="container">
-        <!-- Content on the left -->
-        <div class="content">
+    <link rel="stylesheet" href="/css/sub.css"> <!-- Consistent CSS for all pages -->
+  </head>
+  <body class="subpage">
+    <!-- Include the Header -->
+    <%- include('partials/header') %>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: url('/images/hero-subpage.png') no-repeat center center; background-size: cover;">
+        <div class="hero-overlay">
+            <h2>Web 1.0: The Static Web</h2>
+            <p>Explore the early days of the internet, where static content laid the foundation for the modern web.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <main class="content">
+        <!-- Left Content Section -->
+        <section class="left-content">
             <header>
                 <h1>Web 1.0: The Static Web</h1>
             </header>
@@ -33,43 +45,24 @@
                 <p>CSS allowed developers to separate a website’s content from its visual design. With CSS, developers could create a consistent design theme across multiple web pages by defining styles such as fonts, colors, and layouts in a single style sheet, which was then applied to all relevant pages. This separation of concerns made web development more efficient, scalable, and maintainable.</p>
                 <p>The introduction of CSS also marked the beginning of the shift toward more visually appealing and user-friendly websites, as developers gained greater control over the presentation of their content. In combination with HTML and JavaScript, CSS became an essential part of the modern web development toolkit, allowing developers to create both static and dynamic web pages with a polished look.</p>
             </section>
-            <section>
-                <h2>Perl & PHP: Early Server-Side Scripting for Web 1.0</h2>
-                <p>While JavaScript enabled client-side interactivity, the need for more complex functionality, such as handling form submissions and generating dynamic content on the server, led to the development of server-side scripting languages like Perl and PHP.</p>
-                <p><strong>Perl:</strong> Released in 1987 by Larry Wall, Perl was one of the first languages used for server-side scripting on the web. In the early 1990s, it was widely adopted for creating Common Gateway Interface (CGI) scripts, allowing websites to interact with databases, process forms, and deliver dynamic content.</p>
-                <p><strong>PHP:</strong> PHP, created by Rasmus Lerdorf in 1994, was designed specifically for web development. It became popular because of its ease of use and seamless integration with HTML. By embedding PHP code directly into web pages, developers could build dynamic websites with features such as user authentication, database connectivity, and content management systems (CMS).</p>
-                <p>Both Perl and PHP played a crucial role in advancing the capabilities of the web during the Web 1.0 era, enabling websites to move beyond static content and offer more personalized and interactive experiences for users.</p>
-            </section>
-            <section>
-                <h2>Linux: Powering the Web</h2>
-                <p>Linux, created by Linus Torvalds in 1991, became one of the most important operating systems for web servers during the Web 1.0 era. Its open-source nature, stability, and security made it the preferred platform for hosting websites and web applications.</p>
-                <p>As the web grew, many organizations adopted Linux for their servers due to its flexibility and cost-effectiveness compared to proprietary systems like Windows NT. Major web servers such as Apache were developed to run on Linux, making it a cornerstone of the internet's infrastructure. Even today, Linux remains the dominant operating system for web servers, powering the majority of websites and cloud infrastructure.</p>
-            </section>
-            <section>
-                <h2>Early Search Engines (AltaVista, HotBot, and Others)</h2>
-                <p>As the number of websites grew rapidly in the 1990s, the need for tools to help users find information became apparent. Early search engines such as AltaVista, Lycos, and HotBot emerged to help users navigate the vast amount of web content being generated during Web 1.0.</p>
-                <p><strong>AltaVista:</strong> Launched in 1995, AltaVista was one of the first search engines to offer a full-text search of the web, making it easier for users to find relevant content. It quickly gained popularity due to its speed and comprehensive indexing of web pages.</p>
-                <p><strong>HotBot:</strong> Also launched in 1996, HotBot offered advanced search features and was one of the first engines to incorporate Boolean search options (AND, OR, NOT) for more precise results.</p>
-                <p>While these early search engines were eventually overshadowed by Google’s rise in the late 1990s, they played a crucial role in the evolution of web navigation and laid the groundwork for the sophisticated search technologies we use today.</p>
-            </section>
-        </div>
+        </section>
 
-        <!-- Navigation on the right -->
-        <div class="navigation">
+        <!-- Right Navigation Section -->
+        <aside class="right-navigation">
             <ul>
-                <li><a href="index.html">Home Page</a></li>
-                <li><a href="git.html">GIT</a></li>
-                <li><a href="linux.html">Linux</a></li>
-                <li><a href="pre_internet.html">Pre-Internet: Key Figures and Concepts</a></li>
-                <li><a href="internet_development.html">The Birth of the Internet</a></li>
-                <li><a href="web_1_0.html">Web 1.0: The Static Web</a></li>
-                <li><a href="web_2_0.html">Web 2.0: The Dynamic and Social Web</a></li>
+                <li><a href="/">Home Page</a></li>
+                <li><a href="/git">GIT</a></li>
+                <li><a href="/linux">Linux</a></li>
+                <li><a href="/pre_internet">Pre-Internet: Key Figures and Concepts</a></li>
+                <li><a href="/internet_development">The Birth of the Internet</a></li>
+                <li><a href="/web_1_0" class="active">Web 1.0: The Static Web</a></li>
+                <li><a href="/web_2_0">Web 2.0: The Dynamic and Social Web</a></li>
             </ul>
-        </div>
-    </div>
+        </aside>
+    </main>
 
-    <footer>
-        <p>© 2024 History of Internet</p>
-    </footer>
-</body>
+    <!-- Include the Footer -->
+    <%- include('partials/footer') %>
+    <script src="/js/script.js"></script>
+  </body>
 </html>

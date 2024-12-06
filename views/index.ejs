@@ -4,39 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The History of the Internet</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="logo">
-            <h1>The History of the Internet</h1>
-        </div>
-        <nav class="nav">
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="git.html">Git</a></li>
-                <li><a href="linux.html">Linux</a></li>
-                <li><a href="pre_internet.html">Early Internet</a></li>
-                <li><a href="internet_development.html">Internet Development</a></li>
-                <li><a href="web_1_0.html">Early Web</a></li>
-                <li><a href="web_2_0.html">Current Web</a></li>
-            </ul>
-        </nav>
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    </header>
+    <%- include('partials/header') %>
 
     <!-- Hero Section -->
-    <section class="hero" style="display: flex; justify-content: center; align-items: center; text-align: center; padding: 120px 20px; height: 100vh; background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('images/heroimg.png'); background-size: cover; background-position: center; color: white;">
+    <section class="hero" style="display: flex; justify-content: center; align-items: center; text-align: center; padding: 120px 20px; height: 100vh; background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/images/heroimg.png'); background-size: cover; background-position: center; color: white;">
         <div class="hero-text">
             <h2>Unveiling the History of the Internet</h2>
             <p>Explore the timeline of innovation that shaped the digital world.</p>
-            <button onclick="window.location.href='pre_internet.html';" class="cta-btn">Start Exploring ></button>
+            <button onclick="window.location.href='/pre_internet';" class="cta-btn">Start Exploring ></button>
         </div>
     </section>
-
 
     <!-- Introduction Section -->
     <section class="intro" id="intro">
@@ -116,53 +96,7 @@
         </div>
     </section>        
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <!-- Branding Section -->
-            <div class="footer-brand">
-                <h3>The History of the Internet</h3>
-                <p>Your go-to platform for mastering tech tools and knowledge.</p>
-            </div>
-    
-            <!-- Links Section -->
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
-    
-            <!-- Social Media Section -->
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-                    <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
-                    <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
-                    <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Newsletter Section -->
-        <div class="footer-newsletter">
-            <h4>Stay Updated</h4>
-            <form>
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-
-        <!-- Copyright Section -->
-        <div class="footer-bottom">
-            <p>&copy; <span id="currentYear"></span> The History of the Internet. All rights reserved.</p>
-        </div>
-    </footer>    
-
-    <script src="script.js"></script>
+    <%- include('partials/footer') %>
+    <script src="/js/script.js"></script>
 </body>
 </html>
