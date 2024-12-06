@@ -1,19 +1,9 @@
 <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-brand">
+    <div class="footer-top">
+        <!-- Left Column (Unchanged) -->
+        <div class="footer-left">
             <h3>The History of the Internet</h3>
             <p>Your go-to platform for mastering tech tools and knowledge.</p>
-        </div>
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Terms of Service</a></li>
-            </ul>
-        </div>
-        <div class="footer-social">
             <h4>Follow Us</h4>
             <div class="social-icons">
                 <a href="#"><img src="/images/facebook-icon.png" alt="Facebook"></a>
@@ -22,14 +12,28 @@
                 <a href="#"><img src="/images/instagram-icon.png" alt="Instagram"></a>
             </div>
         </div>
+
+        <!-- Middle: Quick Links (Now centered) -->
+        <div class="footer-middle">
+            <h4>Quick Links</h4>
+            <div class="footer-links-grid">
+                <div class="link-item"><a href="#">About Us</a></div>
+                <div class="link-item"><a href="#">Privacy Policy</a></div>
+                <div class="link-item"><a href="#">Contact</a></div>
+                <div class="link-item"><a href="#">Terms of Service</a></div>
+            </div>
+        </div>
+
+        <!-- Right Column (Unchanged) -->
+        <div class="footer-right">
+            <h4>Stay Updated</h4>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
     </div>
-    <div class="footer-newsletter">
-        <h4>Stay Updated</h4>
-        <form>
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit">Subscribe</button>
-        </form>
-    </div>
+
     <div class="footer-bottom">
         <p>&copy; <%= new Date().getFullYear() %> The History of the Internet. All rights reserved.</p>
     </div>

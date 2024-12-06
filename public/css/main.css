@@ -427,154 +427,162 @@ body {
 .custom-dots .slick-active .dot {
     background: #FFC857; /* Gold for active dot */
 }
-
-/* Footer General Styles */
 .footer {
-    background-color: #121212; /* Deep black background */
+    background-color: #121212; 
     padding: 40px 20px;
-    color: #EAEAEA; /* Light gray text */
-    text-align: center;
+    color: #EAEAEA; 
+    font-size: 14px;
 }
 
-.footer-container {
+/* Center all top elements by default, 
+   so we can then adjust each column as needed */
+.footer-top {
     display: flex;
-    flex-wrap: wrap; /* Responsive layout */
-    justify-content: space-between;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers all columns horizontally */
+    align-items: start;
     max-width: 1200px;
-    margin: 0 auto; /* Center alignment */
+    margin: 0 auto;
+    gap: 40px;
+    text-align: left;
 }
 
-/* Branding Section */
-.footer-brand h3 {
+/* Left Column (unchanged) */
+.footer-left h3 {
     font-size: 18px;
-    color: #FFC857; /* Gold */
+    color: #FFC857;
     margin-bottom: 10px;
 }
 
-.footer-brand p {
+.footer-left p {
     font-size: 14px;
-    color: #B3B3B3; /* Muted gray */
+    color: #B3B3B3;
+    margin-bottom: 20px;
 }
 
-/* Quick Links Section */
-.footer-links h4 {
+.footer-left h4 {
     font-size: 16px;
-    color: #FFC857; /* Gold */
+    color: #FFC857;
     margin-bottom: 10px;
 }
 
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin: 5px 0;
-}
-
-.footer-links ul li a {
-    color: #FFC857; /* Gold links */
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-
-.footer-links ul li a:hover {
-    color: #FF6F61; /* Coral hover */
-}
-
-/* Social Media Section */
-.footer-social h4 {
-    font-size: 16px;
-    color: #FFC857; /* Gold */
-    margin-bottom: 10px;
-}
-
-.footer-social .social-icons a img {
+.social-icons a img {
     width: 24px;
     height: 24px;
     margin: 0 5px;
     transition: transform 0.3s ease;
 }
 
-.footer-social .social-icons a:hover img {
-    transform: scale(1.2); /* Slight enlargement on hover */
+.social-icons a:hover img {
+    transform: scale(1.2);
 }
 
-/* Newsletter Section */
-.footer-newsletter h4 {
+/* Middle Section (Quick Links) */
+.footer-middle {
+    margin: 0 auto; /* Ensures it's centered horizontally */
+    text-align: center;
+}
+
+.footer-middle h4 {
     font-size: 16px;
-    color: #FFC857; /* Gold */
+    color: #FFC857;
+    margin-bottom: 20px;
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px 60px; /* Adjust spacing as needed */
+    justify-content: center; /* Ensure columns are centered within the grid */
+}
+
+.footer-links-grid .link-item a {
+    color: #EAEAEA;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links-grid .link-item a:hover {
+    color: #FF6F61;
+}
+
+/* Right Column (Newsletter) */
+.footer-right h4 {
+    font-size: 16px;
+    color: #FFC857;
     margin-bottom: 10px;
 }
 
-.footer-newsletter form {
+.footer-right form {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.footer-newsletter input[type="email"] {
+.footer-right input[type="email"] {
     padding: 10px;
     font-size: 14px;
-    background-color: #1F1F1F; /* Soft black */
-    border: 1px solid #FFC857; /* Gold border */
+    background-color: #1F1F1F;
+    border: 1px solid #FFC857;
     color: #EAEAEA;
     border-radius: 5px;
     outline: none;
-    width: 250px;
+    flex: 1;
 }
 
-.footer-newsletter input[type="email"]::placeholder {
-    color: #B3B3B3; /* Muted gray placeholder */
+.footer-right input[type="email"]::placeholder {
+    color: #B3B3B3;
 }
 
-.footer-newsletter button {
+.footer-right button {
     padding: 10px 20px;
     font-size: 14px;
-    background-color: #FFC857; /* Gold button */
+    background-color: #FFC857;
     border: none;
-    color: #121212; /* Dark text */
+    color: #121212;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
 }
 
-.footer-newsletter button:hover {
-    background-color: #FF6F61; /* Coral hover */
-    transform: scale(1.05); /* Slight enlargement */
+.footer-right button:hover {
+    background-color: #FF6F61;
+    transform: scale(1.05);
 }
 
-/* Copyright Section */
+/* Bottom Section */
 .footer-bottom {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #B3B3B3; /* Muted gray */
-    border-top: 1px solid #333; /* Subtle divider */
+    margin-top: 40px;
+    border-top: 1px solid #333;
     padding-top: 10px;
+    text-align: center;
+    color: #B3B3B3;
 }
 
-.footer-bottom span {
-    color: #FFC857; /* Gold for the year */
-}
-
-
-/* Responsive Footer */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .footer-container {
+    .footer-top {
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 
-    .footer-links ul li {
-        display: inline-block;
-        margin-right: 15px;
+    .footer-links-grid {
+        gap: 10px 20px;
     }
 
-    .footer-links ul li:last-child {
-        margin-right: 0;
+    .footer-right form {
+        flex-direction: column;
+    }
+
+    .footer-right input[type="email"],
+    .footer-right button {
+        width: 100%;
+    }
+
+    .footer-right button {
+        margin-top: 10px;
     }
 }
