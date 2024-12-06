@@ -10,6 +10,7 @@ body {
     color: #EAEAEA; /* Light gray text */
     background-color: #121212; /* Dark theme background */
     line-height: 1.6;
+    font-size: 16px; /* Base font size */
 }
 
 /* Header Section */
@@ -136,14 +137,14 @@ body {
 }
 
 .hero-text h2 {
-    font-size: 48px;
+    font-size: calc(16px * 1.618 * 1.618); /* Golden ratio */
     margin-bottom: 20px;
     font-weight: bold;
     color: #FFC857; /* Gold for headings */
 }
 
 .hero-text p {
-    font-size: 20px;
+    font-size: calc(16px * 1.618); /* Golden ratio */
     margin-bottom: 30px;
     line-height: 1.8;
     color: #B3B3B3; /* Muted gray for subtext */
@@ -183,14 +184,14 @@ body {
 }
 
 .intro-text h3 {
-    font-size: 36px;
+    font-size: calc(16px * 1.618); /* Golden ratio */
     font-weight: bold;
     margin-bottom: 20px;
     color: #FFC857; /* Gold for headings */
 }
 
 .intro-text p {
-    font-size: 18px;
+    font-size: calc(16px); /* Golden ratio */
     line-height: 1.8;
     color: #B3B3B3; /* Muted gray for body text */
 }
@@ -449,13 +450,13 @@ body {
 
 /* Left Column (unchanged) */
 .footer-left h3 {
-    font-size: 18px;
+    font-size: calc(16px * 1.618); /* Golden ratio for subheadings */
     color: #FFC857;
     margin-bottom: 10px;
 }
 
 .footer-left p {
-    font-size: 14px;
+    font-size: calc(16px / 1.618); /* Golden ratio smaller */
     color: #B3B3B3;
     margin-bottom: 20px;
 }
