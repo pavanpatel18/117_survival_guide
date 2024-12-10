@@ -632,6 +632,10 @@ body {
     color: #B3B3B3;
 }
 
+.footer-bottom p{
+    text-align: center;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .footer-top {
