@@ -29,6 +29,8 @@ body {
 .header .logo h1 {
     font-size: 28px;
     color: #FFC857; /* Gold for the logo */
+    margin: 0; /* Remove default margin */
+    padding: 10px 0; /* Add consistent top and bottom spacing */
 }
 
 /* Hamburger Icon */
@@ -38,9 +40,10 @@ body {
     gap: 7px; /* Increase the gap between the bars */
     cursor: pointer;
     position: fixed; /* Keep it fixed */
-    top: 20px; /* Adjust spacing to align with the header */
+    top: 10px; /* Adjust spacing to align with the header */
     right: 20px; /* Keep it on the right */
     z-index: 1001; /* Ensure it's above all other elements */
+    padding: 10px 0; /* Add consistent top and bottom spacing */
 }
 
 .hamburger span {
